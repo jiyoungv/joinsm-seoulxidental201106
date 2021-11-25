@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="ko">
+<?
+include_once $_SERVER["DOCUMENT_ROOT"]."/_LIB/_include/common_include_func.php";
+
+$db 	= DBConnection();
+$info 	= queryReadByInformation();
+
+$seoData = seoData();
+$seoData['title'] == "" ? $info['info_title'] : $seoData['title'];
+$seoData['title'] = $seoBoardData['board_title'] != "" ? $seoBoardData['board_title'] : $seoData['title'];
+?>
+<head>
+	<meta charset="UTF-8"/>
+	<title><?=$seoData['title']?></title>
+	<meta name="description" content="<?=$seoData['description']?>"/>
+	<meta name="keywords" content="<?=$seoData['keyword']?>"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="<?=$seoData['og_title']?>"/>
+	<meta property="og:description" content="<?=$seoData['og_description']?>"/>
+	<meta property="og:image" content="<?=$seoData['og_image']?>"/>
+	<meta property="og:url" content="<?=$seoData['og_url']?>"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	
+	<link rel="canonical" href="<?=$seoData['canonical_url']?>"/>
+	<link rel="shortcut icon" href="/common/images/favicon.ico"/>
+	<link rel="stylesheet" href="/common/css/font.css?v=201121"/>
+	<link rel="stylesheet" href="/common/css/reset.css"/>
+	<link rel="stylesheet" href="/common/css/animate.css"/>
+	<link rel="stylesheet" href="/common/css/swiper.css"/>
+	<link rel="stylesheet" href="/common/css/slick.css"/>
+	<link rel="stylesheet" href="/common/css/style.css?v=201121"/>
+	<link rel="stylesheet" href="/common/css/main.css?v=201121"/>
+	<link rel="stylesheet" href="/common/css/sub_common.css?v=201121"/>
+	<link rel="stylesheet" href="/common/css/sub.css?v=201121"/>
+	<link rel="stylesheet" href="/common/css/board.css?v=201121"/>	
+
+    <script src="/common/js/swiper.min.js"></script>
+	<script src="/common/js/jquery-3.4.1.min.js"></script>
+    <script src="/common/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- <script src="/common/js/jquery-migrate-3.1.0.min.js"></script> -->
+    <script src="/common/js/jquery.easing.1.3.js"></script>
+    <script src="/common/js/prefixfree.min.js"></script>
+    <script src="/common/js/common.js"></script>
+    <script src="/common/js/slick.js"></script>
+	<script src="/common/js/KHI_check.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="/common/js/jquery.counterup.js"></script>
+    <!--[if lt IE 9]><script src="/common/js/html5shiv.min.js"></script><![endif]-->	
+
+	<!-- 네이버 에디터 -->
+	<script src="/common/editor/js/HuskyEZCreator.js" charset="utf-8"></script> 
+	
+	<? if($info['info_integration_check'] == 1) { ?>
+		<!-- JOINSM RestAPI 통합 통계스크립트 관리 -->
+	<?
+		$restApiObj = new RestScript();
+		$scriptData = $restApiObj->httpPost();
+
+		echo $scriptData['meta']."\n";
+		echo $scriptData['facebook_pixel']."\n";
+		echo $scriptData['google']."\n";
+		echo $scriptData['head_script']."\n";
+	?>
+		<!-- JOINSM RestAPI 통합 통계스크립트 관리 END-->
+
+	<? } else { ?>
+	<!-- HEAD SCRIPT -->
+		<?=$info['info_head_script'];?> 
+	<!-- HEAD SCRIPT -->
+	<? } ?>
+</head>
+
+<script>
+function getParameterByName(name) { // 파라미터 함수
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var page = getParameterByName('page'); // sub_tab에 사용중
+
+function MM_showHideLayers() { 
+    var i,p,v,obj,args=MM_showHideLayers.arguments;
+    for (i=0; i<(args.length-2); i+=3) 
+    with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'block':(v=='hide')?'none':v; }
+    obj.display=v; }
+}
+</script>
+
+<body>
+<? if($info['info_integration_check'] == 1) { ?>
+<!-- JOINSM RestAPI 통합 통계스크립트 관리 -->
+	<?=$scriptData['body_noscript']."\n";?>
+<!-- JOINSM RestAPI 통합 통계스크립트 관리 END-->
+<? } else { ?>
+<!-- BODY SCRIPT -->
+	<?=$info['info_body_script'];?> 
+<!-- BODY SCRIPT -->
+<? } ?>

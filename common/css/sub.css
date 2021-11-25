@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/* 비주얼 */
+.about_v {background-image:url('/page/about/img/about_v_bg.jpg');}
+.dental_v {background-image:url('/page/dental/img/dental_v_bg.jpg');}
+
+/* 치과소개 */
+.about_tit {margin-bottom:90px;text-align:center;}
+.about_tit h2 {font-size:35px;font-weight:500;line-height:1.2857;}
+.about_tit h2 .color_xi {color:#0984a1;}
+.about_tit h6 {margin-bottom:10px;font-size:20px;line-height:1.2;font-weight:300;}
+
+/* 진료철학 */
+.phil_intro_con {margin-bottom:100px;}
+.phil_intro_con:last-child {margin-bottom:0;}
+.phil_intro_img, .phil_intro_txt {width:50%;box-sizing:border-box;}
+.phil_intro_img img {display:inline-block;transform:translateX(-18px);}
+.phil_intro_txt {position:absolute;left:50%;top:52%;transform:translateY(-50%);padding:0 50px;}
+.phil_intro_txt .color_xi {color:#0984a1;}
+.phil_intro_txt h2 {margin-bottom:26px;font-size:30px;font-weight:500;}
+.phil_intro_txt h5 {margin-bottom:26px;font-family:'Roboto';letter-spacing:0;font-size:13px;}
+.phil_intro_txt h5 span {display:inline-block;padding:4px 0;border:1px solid #0082a1;border-left:0;border-right:0;}
+.phil_intro_txt h6 {margin-bottom:2px;font-family:'Roboto';font-weight:500;font-size:60px;letter-spacing:0;}
+.phil_intro_txt p {font-weight:300;line-height:1.5625;}
+.phil_intro_con.reverse .phil_intro_img {float:right;}
+.phil_intro_con.reverse .phil_intro_img img {transform:translateX(0);}
+.phil_intro_con.reverse .phil_intro_txt {left:0;text-align:right;}
+
+
+/* 의료진소개 */
+
+/* 진료공간 */
+
+/* 진료안내 */
+
+/* 오시는길 */
+
+
+/* 심미치료 */
+.aes_attention .sub_attention_box {padding-left:350px;}
+.aes_self_img {width:100%;margin-bottom:55px;overflow-x:auto;}
+.aes_self_img img {display:block;width:100%;}
+.aes_self_txt {padding:96px 20px;padding-left:396px;border:8px solid rgba(101,197,220,.5);box-sizing:border-box;background:url('/page/dental/img/aes_self_tooth.png') left 140px center no-repeat;}
+.aes_self_txt p {font-weight:300;font-size:18px;line-height:1.55;}
+.aes_self_txt p .color_xi {color:#036e88;}
+
+/* 충치치료 */
+.cavity_attention .sub_attention_box {padding-left:325px;}
+
+/* 신경치료 */
+.neuro_attention .sub_attention_box {padding-left:405px;}
+
+.neuro_need_txt {margin-top:27px;padding:70px 90px;border:5px solid #0082a1;box-sizing:border-box;background:#fff url('/page/dental/img/neuro_need_teeth.png') right bottom no-repeat;}
+.neuro_need_txt.frame_left_top:before {width:90px;height:90px;left:-5px;top:-5px;border-color:#65c5dc;}
+.neuro_need_txt h2 {margin-bottom:28px;font-size:25px;}
+.neuro_need_txt h2 span {font-weight:500;}
+.neuro_need_txt h3 {font-weight:300;font-size:20px;line-height:1.3;}
+.neuro_need_txt p {font-weight:300;line-height:1.625;}
+
+.neuro_mta_info_tit {margin-bottom:40px;text-align:center;}
+.neuro_mta_info_tit p {line-height:1.5625;}
+.neuro_mta_info_con {float:left;width:49.2%;height:300px;padding-top:88px;margin-right:1.6%;position:relative;border:2px solid #0082a1;box-sizing:border-box;background:url('/page/dental/img/neuro_mta_logo.png') right bottom no-repeat;text-align:center;}
+.neuro_mta_info_con:nth-child(even) {margin-right:0;}
+.neuro_mta_info_con h3 {width:310px;position:absolute;left:50%;top:0;transform:translate(-50%,-50%);font-family:'Roboto Slab';font-size:28px;background:#fff;}
+.neuro_mta_info_list li {margin-bottom:26px;font-size:20px;line-height:1.2;}
+.neuro_mta_info_list li:last-of-type {margin-bottom:0;}
+
+.neuro_mta_diff {margin-top:50px;}
+.neuro_mta_diff_tit {margin-bottom:50px;text-align:center;}
+.neuro_mta_diff_tit h2 {font-size:30px;line-height:1.2;}
+.neuro_mta_diff_tit h2 span {font-weight:500;}
+.neuro_mta_diff_table {width:100%;text-align:center;}
+.neuro_mta_diff_table tr {border-bottom:1px solid #bdbdbd;}
+.neuro_mta_diff_table tr:first-child {border-top:1px solid #bdbdbd;}
+.neuro_mta_diff_table th, .neuro_mta_diff_table td {border-right:1px solid #bdbdbd;padding:22px 0;width:40%;vertical-align:middle;line-height:1.2;} 
+.neuro_mta_diff_table th:last-child, .neuro_mta_diff_table td:last-child {border-right:0;}
+.neuro_mta_diff_table th:nth-child(1), .neuro_mta_diff_table td:nth-child(1) {width:20%;}
+.neuro_mta_diff_table th strong, .neuro_mta_diff_table td strong {font-weight:500;font-size:18px;}
+.neuro_mta_diff_table .bg_gray {background:#f3f3f3;}
+.neuro_mta_diff_table .bg_green {background:#2092ad;color:#fff;}
+ 
+/* 치주치료 */
+.perio_attention .sub_attention_box {padding-left:200px;}
+
+/* 사랑니발치 */
+.wisdom_full .sub_full_txt h2 b {color:#65c5dc;}
+.wisdom_attention .sub_attention_box {padding-left:150px;}
+
+
+/* **MEDIA_TABLET** */
+@media (max-width:1240px) and (min-width:641px){
+/* 치과소개 */
+
+/* 진료철학 */
+.phil_intro_box {max-width:618px;margin:0 auto;}
+.phil_intro_img, .phil_intro_txt {width:auto;}
+.phil_intro_img {margin-bottom:30px;text-align:center;}
+.phil_intro_img img {transform:none;width:100%;}
+.phil_intro_txt {position:static;left:auto;top:auto;transform:none;}
+.phil_intro_con.reverse .phil_intro_img {float:none;}
+.phil_intro_con.reverse .phil_intro_txt {left:auto;text-align:left;}
+
+/* 의료진소개 */
+
+/* 진료공간 */
+
+/* 진료안내 */
+
+/* 오시는길 */
+
+/* 심미치료 */
+.aes_self_img img {min-width:1000px;}
+.aes_self_txt {padding-left:220px;background-position:left 35px center;}
+.aes_self_txt p br {display:none;}
+
+/* 신경치료 */
+.neuro_need_txt {width:600px;margin-left:auto;margin-right:auto;padding-left:50px;padding-right:80px;background-size:200px;}
+.neuro_need_txt p br {display:none;}
+
+.neuro_mta_info_con h3 {width:200px;}
+
+}
+
+
+/* **MEDIA_MOBILE** */
+@media (max-width:640px){
+/* 치과소개 */
+.about_tit {margin-bottom:40px;}
+.about_tit h2 {font-size:24px;}
+.about_tit h6 {}
+
+/* 진료철학 */
+.phil_intro_con {margin-bottom:50px;}
+.phil_intro_img, .phil_intro_txt {width:auto;}
+.phil_intro_img {margin-bottom:16px;text-align:center;}
+.phil_intro_img img {transform:none;width:100%;}
+.phil_intro_txt {position:static;left:auto;top:auto;transform:none;padding:0 10px;}
+.phil_intro_txt h2 {margin-bottom:16px;font-size:22px;}
+.phil_intro_txt h5 {margin-bottom:16px;font-size:12px;}
+.phil_intro_txt h6 {font-size:36px;}
+.phil_intro_txt p br {display:none;}
+.phil_intro_con.reverse .phil_intro_img {float:none;}
+.phil_intro_con.reverse .phil_intro_txt {left:auto;text-align:left;}
+
+/* 의료진소개 */
+
+/* 진료공간 */
+
+/* 진료안내 */
+
+/* 오시는길 */
+
+/* 심미치료 */
+.aes_self_img {margin-bottom:30px;}
+.aes_self_img img {min-width:800px;}
+.aes_self_txt {padding:30px 20px;padding-top:150px;background-position:center top 20px;background-size:110px;}
+.aes_self_txt p {font-size:16px;}
+.aes_self_txt p br {display:none;}
+
+/* 신경치료 */
+.neuro_full {background-position:right 25% center;}
+
+.neuro_need_txt {margin-top:18px;padding:40px 25px 50px;padding-right:40px;background-size:150px;border-width:3px;}
+.neuro_need_txt.frame_left_top:before {left:-3px;top:-3px;}
+.neuro_need_txt h2 {margin-bottom:18px;font-size:18px;}
+.neuro_need_txt h3 {font-size:16px;}
+.neuro_need_txt p br {display:none;}
+
+.neuro_mta_info_tit {margin-bottom:25px;}
+.neuro_mta_info_con {float:none;width:100%;height:auto;margin:0;margin-bottom:30px;padding:30px 5px 20px;background-size:80px;}
+.neuro_mta_info_con:last-child {margin-bottom:0;}
+.neuro_mta_info_con h3 {width:170px;font-size:20px;}
+.neuro_mta_info_list li {margin-bottom:16px;font-size:16px;}
+
+.neuro_mta_diff {margin-top:30px;}
+.neuro_mta_diff_tit {margin-bottom:30px;}
+.neuro_mta_diff_tit h2 {font-size:20px;}
+.neuro_mta_diff_table th, .neuro_mta_diff_table td {padding:16px 0;}
+.neuro_mta_diff_table th strong, .neuro_mta_diff_table td strong {font-size:16px;}
+}

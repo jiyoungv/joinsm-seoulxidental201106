@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+/* 공통 */
+.main_tit {margin-bottom:100px;}
+
+/* 비주얼 */
+.mv_con {height:800px;background:#0082a1 center/cover no-repeat;}
+.mv_con1 {background-image:url('/common/images/main/mv1.jpg');}
+.mv_con2 {background-image:url('/common/images/main/mv2.jpg');}
+.mv_con3 {background-image:url('/common/images/main/mv3.jpg');}
+.mv_con4 {background-image:url('/common/images/main/mv4.jpg');}
+.mv_con .inner1200 {height:100%;}
+.mv_txt {position:absolute;left:7px;top:50%;transform:translateY(-50%);width:586px;padding:64px 84px 80px;padding-right:0;background:rgba(255,255,255,.2);border:1px solid #fff;box-sizing:border-box;text-align:left;}
+.mv_txt p {font-size:18px;line-height:1.55;}
+.mv_txt_tit {margin-bottom:40px;}
+.mv_txt_tit h1 {font-size:45px;line-height:1.11;}
+.mv_txt_tit h1 strong {font-weight:500;}
+.mv_txt_tit h2 {margin-top:15px;font-size:25px;}
+.mv_txt_tit h6 {margin-bottom:6px;font-family:'Roboto', sans-serif;letter-spacing:0.004em;}
+
+.mv_txt.center {left:50%;transform:translate(-50%,-50%);padding-left:0;text-align:center;}
+.mv_txt.white {color:#fff;}
+
+.mv_con2 .frame_left_top:before, .mv_con2 .frame_right_btm:after {border-color:#89e5fb;}
+.mv_con2 .mv_txt {width:552px;height:auto;padding-top:0;padding-bottom:0;border:0;top:59%;background:transparent;}
+.mv_con2 .mv_txt:before {content:'';display:block;width:100%;height:214px;position:absolute;left:0;top:-200px;background:url('/common/images/main/mv_snu.png') top center no-repeat;}
+.mv_con2 .mv_txt_tit {padding:35px 50px;margin-bottom:20px;}
+
+/* 진료과목 */
+.main_clinic_list {font-size:0;}
+.main_clinic_list li {display:inline-block;vertical-align:top;width:20%;padding:56px 0 50px;text-align:center;border-right:1px solid #dedede;box-sizing:border-box;}
+.main_clinic_list li:last-of-type {border-right:0;}
+.main_clinic_list li a {display:inline-block;padding:0 20px;}
+.main_clinic_list li figure {position:relative;width:78px;height:78px;margin:0 auto 30px;border-radius:50%;transition:background .3s;}
+.main_clinic_list li figure img {display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);transition:all .3s;}
+.main_clinic_list li figure .on {opacity:0;top:70%;}
+.main_clinic_list li h1 {font-weight:500;font-size:18px;}
+.main_clinic_list li a:hover figure {background:#0082a1;}
+.main_clinic_list li a:hover figure .off {opacity:0;}
+.main_clinic_list li a:hover figure .on {opacity:1;top:50%;}
+
+/* 포인트 */
+.main_point {background:url('/common/images/main/main_point_center.jpg') top center/2000px 240px no-repeat}
+.main_point_list {overflow:hidden;}
+.main_point_list li {float:left;width:50%;height:260px;background:#ccc center/100% no-repeat;transition:background .6s;}
+.main_point_list li:nth-of-type(1) {background-image:url('/common/images/main/main_point_bg1.jpg');}
+.main_point_list li:nth-of-type(2) {background-image:url('/common/images/main/main_point_bg2.jpg');}
+.main_point_list li:nth-of-type(3) {background-image:url('/common/images/main/main_point_bg3.jpg');}
+.main_point_list li:nth-of-type(4) {background-image:url('/common/images/main/main_point_bg4.jpg');}
+.main_point_list li:hover {background-size:110%;}
+.main_point_list li a {display:block;width:100%;height:100%;position:relative;padding:58px 60px 0;box-sizing:border-box;}
+.main_point_list li h1 {font-weight:500;font-size:25px;}
+.main_point_list li h2 {font-family:'Roboto Slab';color:#cdcdcd;font-size:30px;opacity:.4}
+.main_point_list li p {line-height:1.625;}
+.main_point_list li .btn {display:inline-block;position:absolute;bottom:40px;left:60px;padding:0.5em 1.5em;border-radius:2em;border:1px solid #d9d9d9;box-sizing:border-box;font-family: 'Roboto Slab';font-weight:300;transition:all .3s;}
+.main_point_list li .btn:hover {border-color:#000;background:#000;color:#fff;}
+
+.main_point_list li.text_right {text-align:right;}
+.main_point_list li.text_right .btn {left:auto;right:60px;}
+.main_point_list li.font_white, .main_point_list li.font_white a {color:#fff;}
+.main_point_list li:nth-of-type(2) h2 {color:#585858;opacity:0.5;}
+.main_point_list li:nth-of-type(3) h2 {color:#96b8c0;}
+.main_point_list li .btn.hover_xi:hover {border-color:#0082a1;background:#0082a1;}
+
+/* 원장님 */
+.main_dr {background:#fefefe url('/common/images/main/main_dr_bg.jpg') center/cover no-repeat;}
+.main_dr .inner1200 > article {float:left;}
+.main_dr_right {margin-left:44px;margin-top:42px;}
+.main_dr_name {position:absolute;left:0;bottom:-95px;background:#fff;padding:45px 33px;box-shadow:-2px 1px 10px 1px rgba(40,40,40,.1);text-align:left;}
+.main_dr_name h1 {float:left;margin-bottom:10px;font-weight:500;font-size:30px;}
+.main_dr_name h1 span {font-size:18px;font-weight:normal;}
+.main_dr_name h2 {margin-bottom:10px;font-weight:500;font-size:25px;line-height:1.4;}
+.main_dr_name p {line-height:1.625;}
+.main_dr_name .btn {float:right;display:block;color:#c1c0c0;padding:8px 0;}
+.main_dr_logo h1 {margin-top:18px;font-family:'Roboto';font-weight:300;font-size:35px;letter-spacing:-0.02em;}
+.main_dr_history li {position:relative;padding-left:8px;line-height:1.625;letter-spacing:-0.02em;}
+.main_dr_history li:before {content:'·';display:block;position:absolute;top:0;left:0;}
+.main_dr_history li.not_dot {padding-left:4px;}
+.main_dr_history li.not_dot:before {display:none;}
+
+/* 커뮤니티 */
+.main_board_box {float:left;width:386px;height:370px;padding:25px 10px;margin-right:21px;border:1px solid #dcdcdc;box-sizing:border-box;}
+.main_board_box:last-child {margin-right:0;}
+.main_board_tit {padding-left:20px;margin-bottom:20px;overflow:hidden;}
+.main_board_tit h2 {float:left;font-weight:500;font-size:20px;}
+.main_board_tit a {float:right;color:#c1c0c0;}
+.main_board_thumb {width:100%;height:180px;margin-bottom:30px;overflow:hidden;position:relative;}
+.main_board_thumb img {display:block;width:100%;position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.main_board_list li {padding:0 20px;box-sizing:border-box;}
+.main_board_list li a {display:block;line-height:2.15;}
+.main_board_list li a:after {content:'';display:block;clear:both;}
+.main_board_list li h3 {float:left;max-width:calc(100% - 70px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.main_board_list li p {float:right;}
+
+.main_board_box.dark {border-color:535353;background:#535353;}
+.main_board_box.dark, .main_board_box.dark a, .main_board_box.dark .main_board_tit a {color:#fff;}
+
+/* 오시는길 */
+.main_loca {height:735px;overflow:hidden;background:#0082a1;}
+.main_loca_con {width:50%;height:100%;float:left;position:relative;overflow:hidden;}
+.main_loca_txt_wrap {width:600px;height:100%;position:relative;float:right;background:url('/common/images/main/main_loca_logo.png') right bottom no-repeat;}
+.main_loca_txt_wrap:before {content:'';display:block;width:2px;height:194px;position:absolute;top:0;left:0;background:#fff;}
+.main_loca_txt {display:inline-block;margin-top:calc(194px + 20px);text-align:left;}
+.main_loca_txt, .main_loca_txt a {color:#fff;}
+.main_loca_txt h2 {margin-bottom:16px;font-family:'Roboto';font-size:35px;}
+.main_loca_txt h6 {margin-top:110px;font-size:18px;line-height:1.44;}
+.main_loca_txt p {line-height:1.625;}
+.main_loca_map .root_daum_roughmap {width:100%;height:100%;}
+.main_loca_map .root_daum_roughmap .wrap_map {height:100%;}
+.main_loca_map .root_daum_roughmap .wrap_controllers {display:none;}
+
+/* 진료안내 */
+.main_info {padding:90px 0;background:#333 url('/common/images/main/main_info_bg.jpg') center/cover no-repeat;}
+.main_info .inner1200 > div {float:left;width:50%;}
+.main_info_promise {margin-top:214px;color:#fff;}
+.main_info_promise h2 {margin-bottom:55px;font-size:35px;line-height:1.28;}
+.main_info_promise h2 span {font-weight:500;color:#58bcd4;}
+.main_info_promise p {font-size:18px;}
+.main_info_time {height:556px;position:relative;padding:110px 55px 0;box-sizing:border-box;background:rgba(54,54,54,.8) url('/common/images/main/main_info_logo.png') right center no-repeat;}
+.main_info_time:after {content:'';display:block;width:1px;height:194px;position:absolute;top:0;left:390px;background:#0082a1;}
+.main_info_time h2 {margin-bottom:14px;color:#fff;font-size:35px;}
+.main_info_time h3 {margin-bottom:44px;font-family:'Roboto';font-size:49px;font-weight:500;}
+.main_info_time h3 a {color:#58bcd4;letter-spacing:-0.08em;}
+.main_info_time_list {color:#fff;}
+.main_info_time_list li {font-size:18px;line-height:1.94;letter-spacing:0.08em;}
+.main_info_time_list li:after {content:'';display:block;clear:both;}
+.main_info_time_list li h6, .main_info_time_list li p {float:left;}
+.main_info_time_list li h6 span {display:inline-block;}
+.main_info_time_list li h6 .letter1 {letter-spacing:2.52em;}
+.main_info_time_list li h6 .letter2 {letter-spacing:0.8em;}
+.main_info_time_list li h6 .letter3 {letter-spacing:0.225em;}
+.main_info_time_list .main_info_time_ps {margin-top:16px;letter-spacing:0.25em;}
+
+
+/* **MEDIA_TABLET** */
+@media (max-width:1240px) and (min-width:641px){ 
+/* 공통*/
+.main_dr .inner1200,
+.main_loca_txt_wrap,
+.main_info .inner1200 {width:600px;}
+
+/* 비주얼 */
+.mv_con {height:600px;background-position:center right 40%;}
+.mv_txt {width:546px;padding:44px 64px 60px;padding-right:0;}
+.mv_txt_tit {margin-bottom:30px;}
+
+.mv_con2 {background-position:center;}
+.mv_con2 .mv_txt {width:532px;}
+.mv_con2 .mv_txt:before {height:150px;background-size:160px;top:-150px;}
+.mv_con2 .mv_txt_tit {padding:25px 40px;}
+
+/* 진료과목 */
+.main_clinic_list li a:hover figure {background:transparent;}
+.main_clinic_list li a:hover figure .off {opacity:1;}
+.main_clinic_list li a:hover figure .on {opacity:0;}
+
+/* 포인트 */
+.main_point {background-position:top right;}
+.main_point_list li {float:none;width:600px;margin:0 auto;}
+.main_point_list li:hover {background-size: 100%;}
+.main_point_list li .btn {border-color:#000;background:#000;color:#fff;}
+.main_point_list li .btn.hover_xi {border-color:#0082a1;background:#0082a1;}
+
+/* 원장님 */
+.main_dr .inner1200 > article {float:none;}
+.main_dr_left {text-align:center;}
+.main_dr_right {margin-top:calc(95px + 20px);margin-left:33px;}
+.main_dr_img {width:100%;}
+.main_dr_name {left:0;}
+
+/* 커뮤니티 */
+.main_board_box {float:none;margin:0 auto 20px;}
+.main_board_box:last-child {margin:0 auto;}
+
+/* 오시는길 */
+.main_loca {height:auto;}
+.main_loca_con {width:auto;height:auto;float:none;}
+.main_loca_txt_wrap {height:auto;float:none;margin:0 auto;padding-bottom:40px;}
+.main_loca_txt_wrap:before {height:80px;}
+.main_loca_txt {margin-top: calc(80px + 20px);}
+.main_loca_txt h6 {margin-top:80px;}
+.main_loca_map {height:350px;}
+
+/* 진료안내 */
+.main_info .inner1200 > div {float:none;width:auto;}
+.main_info_promise {margin:0 0 50px;}
+}
+
+
+/* **MEDIA_MOBILE** */
+@media (max-width:640px){
+/* 공통 */
+.main_tit {margin-bottom:50px;}
+
+.main_point .inner1200,
+.main_dr .inner1200,
+.main_info .inner1200,
+.main_board .inner1200 {max-width:400px;}
+
+/* 비주얼 */
+.mv_con {height:400px;background-position:center right 40%;}
+.mv_txt {width:90%;max-width:420px;padding:20px 25px;}
+.mv_txt p {font-size:16px;}
+.mv_txt_tit {margin-bottom:20px;}
+.mv_txt_tit h1 {font-size:28px;}
+.mv_txt_tit h2 {margin-top:10px;font-size:20px;}
+.mv_txt_tit h6 {margin-bottom:4px;}
+
+.mv_con2 {background-position:center;}
+.mv_con2 .mv_txt {width:90%;max-width:370px;}
+.mv_con2 .mv_txt:before {height:100px;background-size:100px;top:-90px;}
+.mv_con2 .mv_txt_tit {margin-bottom:10px;padding:15px 20px;}
+
+/* 진료과목 */
+.main_clinic_list li {width:33.3333%;padding:28px 0 25px;}
+.main_clinic_list li:nth-of-type(1), .main_clinic_list li:nth-of-type(2) {width:50%;border-bottom:1px solid #dedede;}
+.main_clinic_list li:nth-of-type(2) {border-right:0;}
+.main_clinic_list li a {padding:0 10px;}
+.main_clinic_list li figure {width:40px;height:40px;margin-bottom:15px;}
+.main_clinic_list li figure img {width:100%;}
+.main_clinic_list li h1 {font-size:16px;}
+.main_clinic_list li a:hover figure {background:transparent;}
+.main_clinic_list li a:hover figure .off {opacity:1;}
+.main_clinic_list li a:hover figure .on {opacity:0;}
+
+/* 포인트 */
+.main_point {background-position:top right 10%;}
+.main_point_list li {float:none;width:100%;height:200px;background-size:cover;}
+.main_point_list li:hover {background-size: cover;}
+.main_point_list li a {padding:28px 30px 0;}
+.main_point_list li h1 {font-size:20px;}
+.main_point_list li h2 {font-size:24px;}
+.main_point_list li .btn {bottom:25px;left:30px;border-color:#000;background:#000;color:#fff;}
+.main_point_list li .btn.hover_xi {border-color:#0082a1;background:#0082a1;}
+.main_point_list li.text_right .btn {right:30px;}
+
+/* 원장님 */
+.main_dr .inner1200 > article {float:none;}
+.main_dr_left {text-align:center;}
+.main_dr_img {width:100%;}
+.main_dr_name {left:0;padding:26px 14px;}
+.main_dr_name h1 {font-size:24px;}
+.main_dr_name h1 span {font-size:14px;}
+.main_dr_name h2 {font-size:18px;}
+.main_dr_name .btn {padding:5px 0;}
+.main_dr_right {margin-top:calc(95px + 20px);margin-left:14px;}
+.main_dr_logo img {width:33px;}
+.main_dr_logo h1 {margin-top:5px;font-size:24px;}
+
+/* 커뮤니티 */
+.main_board_box {float:none;width:auto;height:auto;padding:20px 15px;margin:0 auto 20px;}
+.main_board_box:last-child {margin:0 auto;}
+.main_board_tit {padding-left:10px;margin-bottom:15px;}
+.main_board_tit h2 {font-size:18px;}
+.main_board_thumb {height:42vw;max-height:168px;}
+.main_board_list li {padding:0 15px;}
+
+/* 오시는길 */
+.main_loca {height:auto;}
+.main_loca_con {width:auto;height:auto;float:none;}
+.main_loca_txt_wrap {width:90%;height:auto;float:none;margin:0 auto;padding-bottom:30px;background-size:40%;}
+.main_loca_txt_wrap:before {height:60px;}
+.main_loca_txt {margin-top: calc(60px + 20px);}
+.main_loca_txt h2 {font-size:24px;}
+.main_loca_txt h6 {margin-top:60px;font-size:16px;}
+.main_loca_map {height:300px;}
+
+/* 진료안내 */
+.main_info {padding:60px 0;}
+.main_info .inner1200 > div {float:none;width:auto;}
+.main_info_promise {margin:0 0 40px;}
+.main_info_promise h2 {margin-bottom:40px;font-size:22px;}
+.main_info_promise p {font-size:16px;}
+.main_info_time {height:auto;padding:50px 25px 55px;background-size:30%;}
+.main_info_time:after {height:100px;left:285px;}
+.main_info_time h2 {font-size:22px;}
+.main_info_time h3 {margin-bottom:30px;font-size:40px;}
+.main_info_time_list li {font-size:15px;}
+}

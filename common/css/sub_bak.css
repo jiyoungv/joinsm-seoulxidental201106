@@ -1,0 +1,486 @@
+@charset "utf-8";
+
+.full_img {overflow:hidden;}
+.full_img img {display:block;position:relative;top:0;left:50%;transform:translateX(-50%);}
+
+/* **서브_비주얼** */
+/* 서울홍치과 */ .about_v {background-image:url('/page/about/img/about_v_bg.jpg');}
+
+/* **서브_컨텐츠** */
+/* 병원소개 */
+.about_intro_con {position:relative;}
+.about_intro_con:after {content:'';display:block;clear:both;}
+.about_intro_txt {z-index:2;position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.about_intro_txt p {line-height:1.625;}
+.about_intro_tit {margin-bottom:35px;position:relative;}
+.about_intro_tit:after {content:'';display:block;width:518px;height:5px;margin-top:24px;margin-left:70px;background:#367b75;}
+.about_intro_tit h1 {letter-spacing:-2px;}
+.about_intro_tit h2 {position:absolute;bottom:24px;right:96px;font-size:90px;color:#e3e3e3;letter-spacing:-4px;}
+.about_intro_tit h2 b {font-weight:900;}
+.about_intro_img {z-index:1;width:650px;position:relative;float:right;display:inline-block;}
+.about_intro_img img {display:block;width:100%;}
+.about_intro_img:after {z-index:-1;content:'';display:block;width:100%;height:100%;position:absolute;top:25px;left:20px;background:#ececec;}
+.about_intro_con.right .about_intro_txt {left:560px;padding-left:130px;}
+.about_intro_con.right .about_intro_tit:after {margin-left:-130px;}
+.about_intro_con.right .about_intro_img {float:left;}
+.about_intro_con.right .about_intro_img:after {left:-20px;}
+.about_intro.green {background:#38b3a9 url('/page/about/img/intro_bi.png') right center no-repeat;}
+.about_intro.green .about_intro_txt {color:#fff;}
+.about_intro.green .about_intro_tit:after {background:#fff;}
+.about_intro.green .about_intro_img:after {background:#367b75}
+.about_intro.green .about_intro_tit h2 {color:#367b75;} 
+
+/* 의료진소개 */
+.members .sub_tit40 {margin-bottom:40px;font-weight:300;}
+.members_con {position:relative;padding-bottom:80px;}
+.members_picto_list {margin-bottom:50px;width:540px;overflow:hidden;}
+.members_picto_list li {float:left;width:118px;margin-top:26px;margin-right:22px;text-align:center;}
+.members_picto_list li:nth-of-type(4n) {margin-right:0;}
+.members_picto_list li:nth-of-type(-n+4) {margin-top:0;}
+.members_picto_list li img {display:block;width:100%;}
+.members_picto_list li h2 {margin-top:16px;font-size:20px;font-weight:300;}
+.members_history {z-index:2;position:relative;margin-bottom:50px;overflow:hidden;}
+.members_history_list {float:left;margin-right:55px;}
+.members_history_list:last-child {margin-right:0;}
+.members_history_list li {position:relative;padding-left:18px;margin-bottom:20px;font-size:20px;}
+.members_history_list li:last-of-type {margin-bottom:0;}
+.members_history_list li:before {content:'';display:block;width:7px;height:20px;position:absolute;left:0;top:0;background:url('/page/about/img/members_mark.png') left center/100% no-repeat}
+.members_history_list li.empty {height:20px;text-indent:-999em;font-size:0;}
+.members_history_list li.empty:before {display:none;}
+.members_small {margin-bottom:50px;overflow:hidden;}
+.members_small img {display:block;float:left;margin-right:22px;}
+.members_small img:last-of-type {margin-right:0;}
+.members_big {z-index:1;pointer-events:none;position:absolute;right:-290px;bottom:0;}
+.members_big h3 {position:absolute;left:95px;top:344px;font-size:20px;}
+.members_big h3 b {display:inline-block;margin-left:12px;font-size:30px;}
+.members_big img {display:block;}
+.members_promise {z-index:2;position:relative;margin-left:22px;font-size:35px;font-family: 'Nanum Myeongjo';color:#a1a1a1;}
+
+/* 병원둘러보기 */
+.interior_con .inner1200 {overflow:hidden;}
+.interior_img img {width:100%;}
+.interior_nav_roll {width:calc(100% + 10px);transform:translateX(-5px);margin-top:14px;}
+.interior_nav_roll .interior_img {position:relative;margin:0 5px;cursor:pointer;}
+.interior_nav_roll .interior_img:after {content:'';display:block;width:100%;height:100%;position:absolute;top:0;left:0;border:3px solid transparent;box-sizing:border-box;}
+.interior_nav_roll .interior_img.slick-current {cursor:default}
+.interior_nav_roll .interior_img.slick-current:after {border-color:#367b75;}
+
+/* 진료시간&오시는길 */
+.info_tit {width:550px;}
+.info_tit:after {content:'';display:block;width:100%;height:3px;margin-top:32px;background:#367b75;}
+.info_tit h2,.info_tit h3 {display:inline-block;vertical-align:text-bottom;font-size:0;}
+.info_tit h2 {position:relative;padding-right:40px;margin-right:18px;font-size:25px;line-height:1.12;color:#367b75;}
+.info_tit h2:after {content:'';display:block;width:28px;height:28px;position:absolute;right:0;top:50%;transform:translateY(-50%);background:center no-repeat;}
+.info_tit h3 {font-size:18px;font-weight:500;letter-spacing:.5px;}
+.info_tit h3 b {color:#367b75;}
+.info_tit.right {text-align:right;}
+.info_tit.right h2 {padding-right:0;margin-right:0;padding-left:40px;margin-left:18px;}
+.info_tit.right h2:after {right:auto;left:0;}
+
+/* 진료시간 */
+.infotime_wrap {position:relative;}
+.infotime_img {z-index:1;width:600px;position:relative;}
+.infotime_img img {display:block;width:100%;}
+.infotime_txt {z-index:2;position:absolute;top:0;left:540px;}
+.infotime_tit {margin-bottom:35px;}
+.infotime_tit h2:after {background-image:url('/page/about/img/info_icon_time.png');}
+.infotime_list {padding-left:105px;overflow:hidden;}
+.infotime_list li {margin-bottom:16px;overflow:hidden;line-height:1.35;color:#181818;}
+.infotime_list li:last-of-type {margin-bottom:0;}
+.infotime_list li h3,.infotime_list li h4 {float:left;font-size:20px;}
+.infotime_list li h3 {width:88px;margin-right:24px;box-sizing:border-box;text-align:center;}
+.infotime_list li h3 span {display:inline-block;}
+.infotime_list li h3 .letter1 {letter-spacing:44px;}
+.infotime_list li h3 .letter2 {letter-spacing:12px;}
+.infotime_list li .reverse {background:#181818;color:#fff;letter-spacing:1.8px;}
+.infotime_list li .tel {font-size:50px;line-height:1;}
+.infotime_list li .tel a {display:block;color:#367b75;font-family: 'DINMedium';}
+.infotime_list li h4 b {font-weight:800;}
+.infotime_list .ps {padding-left:112px;color:#508a85;}
+.infotime_list .ps1 {margin-top:40px;}
+
+/* 오시는길 */
+.infomap {background:#f6f6f6;}
+.infomap_tit {margin-bottom:20px;} 
+.infomap_tit h2:after {height:35px;background-image:url('/page/about/img/info_icon_map.png');}
+.infomap_kko_wrap {height:400px;}
+.infomap_kko_wrap .root_daum_roughmap .wrap_controllers {display:none;}
+.infomap_kko_wrap .root_daum_roughmap .wrap_map {height:100%;}
+.infomap_kko_ps {padding:18px 0;background:#367b75;color:#fff;text-align:center;}
+.infomap_kko_ps h3 {font-size:20px;}
+.infomap_trans {margin-top:70px;overflow:hidden;}
+.infomap_trans_con {float:left;width:50%;box-sizing:border-box;}
+.infomap_trans_tit {margin-bottom:30px;font-size:20px;}
+.infomap_trans_list h5 {font-weight:500;}
+.infomap_trans_list p {font-weight:300;}
+
+/* 오시는길_교통안내 */
+.infomap_public {padding-left:96px;}
+.infomap_public_list > li {margin-bottom:20px;}
+.infomap_public_list > li:after {content:'';display:block;clear:both;}
+.infomap_public_list > li:last-of-type {margin-bottom:0;}
+.infomap_public_list > li h5 {margin-bottom:6px;}
+.infomap_public_picto,.infomap_public_txt {float:left;}
+.infomap_public_picto {display:block;width:48px;height:48px;border-radius:50%;margin-right:8px;background:#367b75;}
+.infomap_public_txt {margin-top:2px;}
+.infomap_subway_list li h6,.infomap_subway_list li p {display:inline-block;vertical-align:middle;margin-right:2px;}
+.infomap_subway_list li h6 {position:relative;width:30px;height:30px;border-radius:50%;text-align:center;color:#fff;font-size:10px;}
+.infomap_subway_list li h6.line7 {background:#546d11;font-size:16px;}
+.infomap_subway_list li h6.linejung {background:#42cebc;}
+.infomap_subway_list li h6.linechun {background:#0c866e;}
+.infomap_subway_list li h6 span {display:block;width:100%;position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.infomap_bus_list {margin-top:7px;}
+.infomap_bus_list li {margin-bottom:7px;}
+.infomap_bus_list li:after {content:'';display:block;clear:both;}
+.infomap_bus_list li:last-of-type {margin-bottom:0;}
+.infomap_bus_list li i,.infomap_bus_list li p {float:left;line-height:1.5;}
+.infomap_bus_list li i {display:block;width:54px;margin-right:10px;text-align:center;color:#fff;}
+.infomap_bus_list li i.linegreen {background:#1ddb22;}
+.infomap_bus_list li i.lineblue {background:#1d4edb;}
+.infomap_bus_list li i.linered {background:#db1d1d;}
+
+/* 오시는길_주차안내 */
+.infomap_self {padding-left:30px;}
+.infomap_self_list li {margin-bottom:20px;}
+.infomap_self_list li:last-of-type {margin-bottom:0;}
+.infomap_self_list li h5 {margin-bottom:10px;}
+
+/* 임플란트보험안내 */
+.insure_tel {padding:82px 0 70px;background:#6d8d8c url('/page/implant/img/insure_tel_bg.jpg') center/cover no-repeat;}
+.insure_tel_txt {text-align:center;}
+.insure_tel_txt h3 {margin-bottom:46px;font-size:30px;color:#fff;}
+.insure_tel_txt h3:after {content:'';display:block;margin:36px auto 0;width:105px;height:4px;background:#fff;}
+.insure_tel_link {display:inline-block;font-size:80px;color:#83ebe6;}
+.insure_intro .sub_tit_wrap {margin-bottom:15px;}
+.insure_table {width:100%;border:1px solid #ccc;background:#fff;}
+.insure_table tr {border-bottom:1px solid #ccc;}
+.insure_table tr:last-of-type {border-bottom:0;}
+.insure_table th,.insure_table td {vertical-align:middle;box-sizing:border-box;}
+.insure_table th b,.insure_table td b {font-weight:500;}
+.insure_table th {width:20.25%;background:#f5f5f5;text-align:center;font-size:25px;}
+.insure_table td {padding:40px 10px;padding-left:62px;font-size:22px;font-weight:300;line-height:1.63;}
+.insure_table_ps {font-size:18px;color:#ed1c24;}
+
+/* 구강유전자검사 */
+.gene_green {background:#f0f6f5;}
+.gene_con .sub_tit_wrap {margin-bottom:35px;}
+.gene_con .sub_tit40 span {display:inline-block;font-size:0.625em;}
+
+.gene_kind {background:url('/page/dental/img/gene_kind_bg.jpg') center/cover no-repeat;}
+.gene_kind .sub_tit_wrap,.gene_differ .sub_tit_wrap {margin-bottom:0;}
+.gene_kind_list li {margin-bottom:22px;display:table;width:100%;border:1px solid #8a8a8a;box-sizing:border-box;}
+.gene_kind_list li:last-of-type {margin-bottom:0;}
+.gene_kind_list li h3,.gene_kind_list li p {display:table-cell;height:76px;vertical-align:middle;box-sizing:border-box;line-height:1.2;}
+.gene_kind_list li h3 {width:228px;background:#387c76 url('/page/dental/img/gene_kind_bg2.png') center/cover no-repeat;font-size:25px;color:#fff;text-align:center;}
+.gene_kind_list li p {padding-left:26px;background:#fff;font-size:22px;font-weight:300;}
+.gene_differ_box {margin-top:-1px;overflow:hidden;border:1px solid #8a8a8a;}
+.gene_differ_con,.gene_differ_img {width:50%;float:left;}
+.gene_differ_img {border-left:1px solid #959697;box-sizing:border-box;}
+.gene_differ_img img {display:block;width:100%;}
+.gene_differ_tit {padding:34px 0;text-align:center;color:#fff;background:#353434 url('/page/dental/img/gene_differ_ci1.png') left center/auto 100% no-repeat;line-height:1.25;}
+.gene_differ_tit h3 {font-size:27px;}
+.gene_differ_tit p {font-size:18px;font-weight:300;}
+.gene_differ_txt {padding:30px 24px;}
+.gene_differ_list {text-align:left;}
+.gene_differ_list li {position:relative;padding-left:15px;margin-bottom:2px;font-size:18px;line-height:1.3333;}
+.gene_differ_list li:last-of-type {margin-bottom:0;}
+.gene_differ_list li:before {content:'';display:block;width:5px;height:5px;border-radius:50%;position:absolute;left:0;top:9px;background:#353434;}
+.gene_differ_box.right .gene_differ_con {float:right;}
+.gene_differ_box.right .gene_differ_tit {background:#367b75 url('/page/dental/img/gene_differ_ci2.png') right center/auto 100% no-repeat;}
+.gene_differ_box.right .gene_differ_list li:before {background:#367b75;}
+.gene_differ_box.right .gene_differ_img {border-left:0;border-right:1px solid #959697;}
+.gene_target_list {overflow:hidden;}
+.gene_target_list li {float:left;text-align:center;margin-right:6px;}
+.gene_target_list li:last-of-type {margin-right:0; }
+.gene_target_list li img {display:inline-block;margin-bottom:10px;}
+.gene_target_list li h3 {font-size:25px;line-height:1.28;}
+.gene_process_ps {display:none;margin-top:20px;text-align:center;}
+.gene_method .sub_info_right {padding-top:218px;}
+
+/* 치아미백 */
+.white_self_ps {display:none;margin-top:20px;text-align:center;}
+.white_self_box {margin-top:56px;border:8px solid #f0f6f5;padding-left:135px;box-sizing:border-box;overflow:hidden;}
+.white_self_box > img, .white_self_txt {display:inline-block;vertical-align:middle;}
+.white_self_txt {margin-left:100px;}
+.white_self_txt p {line-height:1.625;}
+.white_self_txt p b {color:#367b75;} 
+/*.white_self_img {
+	background: linear-gradient(to left, hsla(0,0%,100%,0), white 15px) left center / 50px 100%,
+	radial-gradient(at left, rgba(0,0,0,.2), transparent 70%) left center / 15px 100%,
+	linear-gradient(to left, white 15px, hsla(0,0%,100%,0)) right center / 50px 100%,
+	radial-gradient(at right, rgba(0,0,0,.2), transparent 70%) right center /15px 100%;
+	background-repeat: no-repeat;
+	background-attachment: local, scroll, local, scroll;
+}*/
+
+/* 라미네이트&세라믹 */
+.lamicera_differ_table {width:100%;background:#f2f8fb;text-align:center;}
+.lamicera_differ_table h3 {font-size:25px;}
+.lamicera_differ_table tr {width:100%;border-bottom:1px solid #fff;}
+.lamicera_differ_table th,.lamicera_differ_table td {width:40%;border-right:1px solid #fff;vertical-align:middle;}
+.lamicera_differ_table th:last-of-type,.lamicera_differ_table td:last-of-type {border-right:0;}
+.lamicera_differ_table th:first-of-type,.lamicera_differ_table td:first-of-type {width:20%;}
+.lamicera_differ_table th {padding:18px 0;background:#367b75;color:#fff;}
+.lamicera_differ_table td p {padding:30px 0;font-weight:300;line-height:1.625;}
+.lamicera_differ_table .dark {background:#434647;}
+.lamicera_differ_table .dark h3 {color:#8cd7d0;}
+
+/* 보톡스 */
+.botox_aftercare_wrap {overflow:hidden;}
+.botox_aftercare_txt {float:left;}
+.botox_aftercare_list {margin-bottom:60px;}
+.botox_aftercare_list li {margin-bottom:24px;font-size:18px;font-weight:500;line-height:1.3;}
+.botox_aftercare_list li:last-of-type {margin-bottom:0;}
+.botox_aftercare_ps {position:relative;padding-left:82px;font-weight:500;font-size:22px;line-height:1.45;color:#367b75;}
+.botox_aftercare_ps:before {content:'!';width:61px;height:61px;line-height:55px;position:absolute;left:0;top:0;border:5px solid #367b75;box-sizing:border-box;border-radius:50%;font-size:30px;font-weight:900;color:#367b75;text-align:center;}
+.botox_aftercare_img {float:right}
+.botox_aftercare_img img {display:block;}
+
+/* **MEDIA_TABLET** */
+@media (max-width:1280px) and (min-width:641px){
+
+.full_img img {width:150%;}
+
+/* **서브_비주얼** */
+/* 서울홍치과 */ .about_v {background-position:right 28% center;}
+
+/* **서브_컨텐츠** */
+/* 병원소개 */
+.about_intro_con {width:600px;margin:0 auto;}
+.about_intro_txt {position:relative;top:auto;transform:none;margin-bottom:40px;}
+.about_intro_tit:after {width:100%;margin-left:0;}
+.about_intro_tit h2 {right:0;}
+.about_intro_img {float:none;width:auto;}
+.about_intro_con.right .about_intro_txt {left:auto;padding-left:0;}
+.about_intro_con.right .about_intro_tit:after {margin-left:0;}
+.about_intro_con.right .about_intro_img {float:none;}
+.about_intro.green {background-position:right top 100px;}
+
+/* 의료진소개 */
+.members .inner1200 {width:600px;}
+.members .sub_tit40 {font-size:32px;}
+.members_history_list {float:none;margin-right:0;margin-bottom:20px;}
+.members_history_list:last-child {margin-bottom:0;}
+.members_history_list li.empty {display:none;}
+.members_small img {width:280px;}
+.members_big {right:-110px;bottom:360px;}
+.members_big h3 {left:-20px;top:30px;}
+.members_big img {width:420px;}
+.members_promise {margin-left:0;font-size:30px;}
+
+/* 진료시간&오시는길 */
+.infotime .inner1200 {width:600px;}
+.infotime_txt {position:static;margin-bottom:40px;}
+.infomap .inner1200 {width:600px;}
+.infomap_trans_con {float:none;width:auto;}
+.infomap_public {padding-left:0;margin-bottom:50px;}
+.infomap_self {padding-left:0;}
+
+/* 임플란트보험안내 */
+.insure_intro .inner1200 {width:600px;}
+.insure_table th {font-size:22px;}
+.insure_table td {padding:20px 5px;padding-left:15px;font-size:18px;}
+
+/* 구강유전자검사 */
+.gene_con .inner1200 {width:600px;}
+.gene_con .sub_tit40 {font-size:36px;}
+
+.gene_kind_list li h3 {width:122px;font-size:22px;}
+.gene_kind_list li p {padding-left:12px;font-size:20px;}
+.gene_differ_con, .gene_differ_img {width:100%;float:none;}
+.gene_differ_img,.gene_differ_box.right .gene_differ_img {border:0;border-top:1px solid #959697;}
+.gene_differ_img {border-top:1px solid #959697;}
+.gene_differ_box.right .gene_differ_con {float:none;}
+.gene_differ_list li br {display:none;}
+.gene_target_list li {float:none;margin-right:0;display:table;margin-bottom:6px;text-align:left;}
+.gene_target_list li img,.gene_target_list li h3 {display:table-cell;vertical-align:middle;}
+.gene_target_list li img {margin-bottom:0;width:250px;margin-right:10px;}
+.gene_process_img {padding-bottom:10px;overflow-y:auto;white-space:nowrap;}
+.gene_process_img img {width:910px;}
+.gene_process_ps {display:block;}
+.gene_method .sub_info_right {padding-top:0;}
+
+/* 치아미백 */
+.white_self .inner1200 {width:600px;}
+.white_self_img {padding-bottom:10px;overflow-y:auto;white-space:nowrap;}
+.white_self_img img {width:910px;}
+.white_self_ps {display:block;}
+.white_self_box {padding:0 15px;}
+.white_self_box > img {width:100px;}
+.white_self_txt {margin-left:10px;}
+
+/* 라미네이트&세라믹 */
+.lamicera_differ .inner1200 {width:600px;}
+.lamicera_differ_table h3 {font-size:20px;}
+
+/* 보톡스 */
+.botox_aftercare .inner1200 {width:600px;}
+.botox_aftercare_txt,.botox_aftercare_img {float:none;}
+.botox_aftercare_txt {margin-bottom:60px;}
+}
+
+/* **MEDIA_MOBILE** */
+@media (max-width:640px){
+
+.full_img img {width:150%;}
+
+/* **서브_비주얼** */
+/* 서울홍치과 */ .about_v {background-position:right 28% center;}
+
+/* **서브_컨텐츠** */
+/* 병원소개 */
+.about_intro_con {width:300px;margin:0 auto;}
+.about_intro_txt {position:relative;top:auto;transform:none;margin-bottom:20px;}
+.about_intro_txt p br {display:none;}
+.about_intro_tit {margin-bottom:18px;}
+.about_intro_tit:after {width:100%;margin-top:12px;margin-left:0;}
+.about_intro_tit h2 {bottom:12px;right:0;font-size:55px;}
+.about_intro_img {float:none;width:auto;}
+.about_intro_img:after {top:12px;left:10px;}
+.about_intro_con.right .about_intro_txt {left:auto;padding-left:0;}
+.about_intro_con.right .about_intro_tit:after {margin-left:0;}
+.about_intro_con.right .about_intro_img {float:none;}
+.about_intro_con.right .about_intro_img:after {left:-10px;}
+.about_intro.green {background-position:right top;background-size:180px;}
+
+/* 의료진소개 */
+.members .inner1200 {width:300px;}
+.members .sub_tit40 {margin-bottom:20px;font-size:20px;}
+.members_con {padding-bottom:40px;}
+.members_picto_list {margin-bottom:25px;width:100%;}
+.members_picto_list li {width:23.5%;margin-top:12px;margin-right:2%}
+.members_picto_list li h2 {margin-top:8px;font-size:14px;}
+.members_history {margin-bottom:25px;}
+.members_history_list {float:none;margin-right:0;margin-bottom:10px;}
+.members_history_list:last-child {margin-bottom:0;}
+.members_history_list li {padding-left:9px;margin-bottom:10px;font-size:14px;}
+.members_history_list li:before {width:4px;height:14px;}
+.members_history_list li.empty {display:none;}
+.members_small {margin-bottom:25px;}
+.members_small img {width:49%;margin-right:2%;}
+.members_big {right:-50px;bottom:222px;}
+.members_big h3 {left:30px;top:-60px;font-size:16px;}
+.members_big h3 b {margin-left:6px;font-size:18px;}
+.members_big img {width:200px;}
+.members_promise {margin-left:0;font-size:20px;line-height:1.3;}
+
+/* 병원둘러보기 */
+.interior_nav_roll {width:calc(100% + 2vw);transform:translateX(-1vw);margin-top:8px;}
+.interior_nav_roll .interior_img {margin:0 1vw;}
+
+/* 진료시간&오시는길 */
+.info_tit {width:auto;}
+.info_tit:after {margin-top:16px;}
+.info_tit h2 {padding-right:22px;margin-right:6px;font-size:18px;}
+.info_tit h2:after {width:18px;height:18px;background-size:auto 100%;}
+.info_tit h3 {font-size:16px;}
+.info_tit.right h2 {padding-left:22px;margin-left:6px;}
+
+/* 진료시간 */
+.infotime .inner1200 {width:300px;}
+.infotime_txt {position:static;margin-bottom:20px;}
+.infotime_tit {margin-bottom:18px;}
+.infotime_list {padding-left:0;}
+.infotime_list li {margin-bottom:8px;}
+.infotime_list li h3, .infotime_list li h4 {font-size:16px;}
+.infotime_list li h3 {width:72px;margin-right:12px;}
+.infotime_list li h3 .letter1 {letter-spacing:36px;}
+.infotime_list li h3 .letter2 {letter-spacing:10px;}
+.infotime_list li .tel {font-size:30px;}
+.infotime_list .ps {padding-left:84px;}
+.infotime_list .ps1 {margin-top:20px;}
+.infotime_img {width:100%;}
+
+/* 오시는길 */
+.infomap .inner1200 {width:300px;}
+.infomap_tit {margin-bottom:10px;}
+.infomap_kko_wrap {height:300px;}
+.infomap_kko_ps {padding:9px 0;}
+.infomap_kko_ps h3 {font-size:16px;}
+.infomap_trans {margin-top:35px;}
+.infomap_trans_con {float:none;width:auto;}
+.infomap_trans_tit {margin-bottom:15px;font-size:16px;}
+
+.infomap_public {padding-left:0;margin-bottom:25px;}
+.infomap_public_list > li {margin-bottom:10px;}
+.infomap_public_list > li h5 {margin-bottom:4px;}
+.infomap_public_picto {width:35px;height:35px;margin-right:4px;}
+.infomap_public_picto img {width:100%;}
+.infomap_public_txt {margin-top:1px;}
+.infomap_bus_list {margin-top:4px;}
+.infomap_bus_list li i {width:40px;margin-right:5px;}
+.infomap_self {padding-left:0;}
+.infomap_self_list li {margin-bottom:10px;}
+.infomap_self_list li h5 {margin-bottom:5px;}
+.infomap_self_list li p {line-height:1.4;}
+
+/* 임플란트보험안내 */
+.insure_tel {padding:40px 0 35px;}
+.insure_tel_txt h3 {margin-bottom:23px;font-size:18px;}
+.insure_tel_txt h3:after {margin-top:18px;width:50px;height:3px;}
+.insure_tel_link {font-size:40px;}
+.insure_intro .sub_tit_wrap {margin-bottom:8px;}
+.insure_intro .inner1200 {width:300px;}
+.insure_table th {width:28%;font-size:16px;}
+.insure_table td {padding:20px 5px;padding-left:15px;font-size:14px;}
+.insure_table_ps {font-size:13px;}
+
+/* 구강유전자검사 */
+.gene_con .inner1200 {width:300px;}
+.gene_con .sub_tit_wrap {margin-bottom:18px;}
+.gene_con .sub_tit40 {font-size:22px;}
+
+.gene_kind {background-position:left 24% center;}
+.gene_kind_list li {display:block;margin-bottom:11px;text-align:center;}
+.gene_kind_list li h3, .gene_kind_list li p {display:block;height:auto;}
+.gene_kind_list li h3 {width:100%;font-size:18px;padding:5px;}
+.gene_kind_list li h3 br {display:none;}
+.gene_kind_list li p {padding:10px 5px;font-size:14px;}
+.gene_differ_con, .gene_differ_img {width:100%;float:none;}
+.gene_differ_img,.gene_differ_box.right .gene_differ_img {border:0;border-top:1px solid #959697;}
+.gene_differ_box.right .gene_differ_con {float:none;}
+.gene_differ_tit {padding:18px 0;}
+.gene_differ_tit h3 {font-size:18px;}
+.gene_differ_tit p {font-size:15px;}
+.gene_differ_txt {padding:15px 10px;}
+.gene_differ_list li {padding-left:8px;font-size:14px;}
+.gene_differ_list li:before {width:3px;height:3px;top:7.5px;}
+.gene_differ_list li br {display:none;}
+.gene_target_list li {float:none;margin-right:0;margin-bottom:10px;}
+.gene_target_list li img {margin-bottom:5px;width:100%;}
+.gene_target_list li h3 {font-size:18px;}
+.gene_process_img {padding-bottom:10px;overflow-y:auto;white-space:nowrap;}
+.gene_process_img img {width:520px;}
+.gene_process_ps {display:block;}
+.gene_method .sub_info_right {padding-top:0;}
+
+/* 치아미백 */
+.white_self .inner1200 {width:300px;}
+.white_self_img {padding-bottom:10px;overflow-y:auto;white-space:nowrap;}
+.white_self_img img {width:510px;}
+.white_self_ps {display:block;}
+.white_self_box {margin-top:22px;border-width:4px;padding:0 10px 20px;}
+.white_self_box > img, .white_self_txt {display:block;}
+.white_self_box > img {width:88px;margin:0 auto;}
+.white_self_txt {margin-left:0;text-align:center;}
+
+/* 라미네이트&세라믹 */
+.lamicera_differ .inner1200 {width:300px;}
+.lamicera_differ_table h3 {font-size:14px;line-height:1.3;}
+.lamicera_differ_table th,.lamicera_differ_table td {width:45%;}
+.lamicera_differ_table th:first-of-type,.lamicera_differ_table td:first-of-type {width:10%;}
+.lamicera_differ_table th {padding:9px 0;}
+.lamicera_differ_table td img {height:100px;}
+.lamicera_differ_table td p {padding:15px 5px;}
+
+/* 보톡스 */
+.botox_aftercare .inner1200 {width:300px;}
+.botox_aftercare_txt,.botox_aftercare_img {float:none;}
+.botox_aftercare_txt {margin-bottom:30px;}
+.botox_aftercare_list {margin-bottom:30px;}
+.botox_aftercare_list li {margin-bottom:12px;font-size:14px;}
+.botox_aftercare_ps {padding-left:45px;font-size:18px;}
+.botox_aftercare_ps:before {width:35px;height:35px;line-height:32px;border-width:3px;font-size:20px;}
+.botox_aftercare_ps br {display:none;}
+.botox_aftercare_img img {width:100%;}
+}

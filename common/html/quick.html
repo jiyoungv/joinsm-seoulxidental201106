@@ -1,0 +1,52 @@
+<div class="quick_pc">
+    <ul class="quick_pc_list">
+        <li><a href="/page/implant/landing.php" title="임플란트 바로가기"><img src="/common/images/main/quick_pc1.png" alt="임플란트" /></a></li>
+        <li><a href="/page/wisdom/landing.php" title="사랑니 발치 바로가기"><img src="/common/images/main/quick_pc2.png" alt="사랑니 발치" /></a></li>
+        <li><a href="/page/braces/landing.php" title="치아교정 바로가기"><img src="/common/images/main/quick_pc3.png" alt="치아교정" /></a></li>
+        <li><a href="http://pf.kakao.com/_rKrHxb" title="카톡상담 바로가기" target="_blank"><img src="/common/images/main/quick_pc4.png" alt="카톡상담" /></a></li>
+        <li><a href="https://booking.naver.com/booking/13/bizes/373808?area=ple" title="네이버예약 바로가기" target="_blank"><img src="/common/images/main/quick_pc5.png" alt="네이버예약" /></a></li>
+        <li><a href="/board/online/list.php" title="온라인상담 바로가기"><img src="/common/images/main/quick_pc6.png" alt="온라인상담" /></a></li>
+    </ul>
+    <div class="quick_pc_top"><img src="/common/images/main/quick_top.png" alt="TOP" /></div>
+</div>
+
+<div class="quick_m">
+    <ul class="quick_m_list">
+        <li><a href="http://pf.kakao.com/_rKrHxb" title="카카오톡 상담 바로가기" target="_blank"><img src="/common/images/main/quick_m1.jpg" alt="카카오톡 상담" /></a></li>
+        <li><a href="https://booking.naver.com/booking/13/bizes/373808?area=ple" title="네이버예약 바로가기" target="_blank"><img src="/common/images/main/quick_m2.jpg" alt="네이버예약" /></a></li>
+        <li><a href="/page/about/information.php" title="진료안내 바로가기"><img src="/common/images/main/quick_m3.jpg" alt="진료안내" /></a></li>
+        <li><a href="tel:02-6956-7525" title="전화연결 바로가기"><img src="/common/images/main/quick_m4.jpg" alt="전화연결" /></a></li>
+    </ul>
+</div>
+
+<script>
+$(document).ready(function(){
+    quickPcTop();
+    quickM();
+});
+
+$(window).resize(function(){ quickM(); });
+$(window).scroll(function(){ quickPcScroll(); });
+
+function quickPcScroll (){
+	if($('.quick_pc').css('display')==='block'){
+		if( $(window).scrollTop() >= 170 ){
+			$('.quick_pc').addClass('fix');
+		}else{
+			$('.quick_pc').removeClass('fix');
+		}    	
+	}
+}
+
+function quickPcTop (){
+    $('.quick_pc_top').on('click',function(){
+        $('html,body').stop().animate({scrollTop:0}, 500);
+    });
+}
+
+function quickM (){
+    if( $('.doc_m').css('display') === 'block'){ 
+        $('#footer').css({paddingBottom: parseInt($('.quick_m').outerHeight()+20) });
+    }
+}
+</script>

@@ -1,0 +1,54 @@
+<!-- include_once $_SERVER['DOCUMENT_ROOT']."/common/html/quick.html"; -->
+
+<footer id="footer">
+    <div class="inner1200">
+        <h1 class="footer_logo"><img src="/common/images/main/footer_logo.png" alt="서울홍치과 로고" /></h1>
+        <div class="footer_con">
+            <ul class="footer_util_list">
+                <li><a href="/common/html/rule.html" title="이용약관 바로가기">이용약관</a></li>   
+                <li><a href="/common/html/privacy.html" title="개인정보처리방침 바로가기">개인정보처리방침</a></li>   
+				<li><a href="" title="이메일무단수집거부 바로가기">이메일무단수집거부</a></li>   
+            </ul>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>상호명 : 서울자이치과</li>
+                    <li>대표 : 박세민</li>
+                    <li>사업자등록번호 : 143-99-01182</li>
+                </ul>
+                <ul class="footer_info_list">
+                    <li>주소 : 경기도 김포시 걸포2로 21, 5층 503, 504호</li>
+                    <li>전화번호 : 031-8049-7528</li>
+                </ul>
+                <p>Copyright ⓒ 2020 SEOUL XI DENTAL All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<!--//wrap-->
+
+<script>
+/* footer */
+$(document).ready(function(){
+	$('.footer_logo img').on('click',function(){
+		$('html').stop().animate({scrollTop: 0}, 500);
+	});
+});
+</script>
+	
+<? if($info['info_integration_check'] == 1) { ?>
+<!-- JOINSM RestAPI 통합 통계스크립트 관리 -->
+<?
+	echo $scriptData['naver']."\n";
+	echo $scriptData['body_script']."\n";
+	echo $scriptData['acecounter']."\n";
+?>
+<!-- JOINSM RestAPI 통합 통계스크립트 관리 END-->
+
+<? } else { ?>
+<!-- FOOTER SCRIPT -->
+	<?=$info['info_footer_script'];?> 
+<!-- FOOTER SCRIPT -->
+<? } ?>
+
+</body></html>

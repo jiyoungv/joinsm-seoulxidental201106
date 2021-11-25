@@ -1,0 +1,65 @@
+<article class="con sub_btm">
+	<div class="inner1200">
+		<article class="sub_btm_con">
+			<div class="sub_btm_tit">
+				<h2>서울자이치과의 <br/>특별함</h2>
+				<p>서울자이치과는 환자분들의 아름답고 <br/>환한 미소를 위해 항상 최선을 다하겠습니다.</p>
+				<a href="" title="온라인상담 바로가기"><span><b>온라인상담 바로가기</b></span></a>
+			</div>
+			<div class="swiper-container sub_btm_roll_container">
+				<div class="swiper-wrapper sub_btm_roll">
+					<div class="swiper-slide roll_item roll_item1">
+						<h3><b>서울대 치과대학 출신</b></h3>
+						<h4>통합치의학과 전문의</h4>
+					</div>
+					<div class="swiper-slide roll_item roll_item2">
+						<h3><b>정직한 상담, 친절한 진료</b></h3>
+					</div>
+					<div class="swiper-slide roll_item roll_item3">
+						<h3><b>12단계의 멸균 시스템</b></h3>
+					</div>
+					<div class="swiper-slide roll_item roll_item4">
+						<h3><b>서울대 치과병원급 장비</b></h3>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</article>
+	</div>
+</article>
+
+<script>
+/* 서브 하단 공통 */
+function subBtm (){
+	var subBtmRoll = new Swiper('.sub_btm_roll_container', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 1241px
+			1241: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+		}
+	});
+}
+
+$(document).ready(function(){
+	subBtm();
+});
+</script>

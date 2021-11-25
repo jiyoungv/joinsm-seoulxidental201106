@@ -1,0 +1,28 @@
+
+<div class='kth_result_form mt50 mb200'>
+	<div class='util sec1 basic'>
+		<div class='box'>
+			<strong class='title'>이전글</strong>
+			<p class='con'>
+				<? if($rowPrev['title'] != '') { ?>
+				<a class='' href="<?=$board?>_view.php?board_number=<?=$rowPrev['board_number']?>"><!-- 게시글 제목 Start --><?=$rowPrev['title']?><!-- 게시글 제목 End --></a>
+				<? } else { ?>
+				<a class='' href="#this"><!-- 게시글 제목 Start -->글이 존재하지 않습니다.<!-- 게시글 제목 End --></a>
+				<? } ?>
+			</p>
+		</div>
+	</div>
+
+	<div class='util sec1 basic'>
+		<div class='box'>
+			<strong class='title'>다음글</strong>
+			<p class='con'>
+				<? if($rowNext['title'] != '') { ?>
+				<a class='' href="<?=$board?>_view.php?board_number=<?=$rowNext['board_number']?>"><!-- 게시글 제목 Start --><?=$rowNext['title']?><!-- 게시글 제목 End --></a>
+				<? } else { ?>
+				<a class='' href="#this"><!-- 게시글 제목 Start -->글이 존재하지 않습니다.<!-- 게시글 제목 End --></a>
+				<? } ?>
+			</p>
+		</div>
+	</div>
+</div>

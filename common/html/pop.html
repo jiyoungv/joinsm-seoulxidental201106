@@ -1,0 +1,164 @@
+<?
+// 일정시간동안 팝업 등록 스크립트
+// ※ 사용방법
+// 1) $pop_end_(숫자)의 숫자가 겹치지 않도록 값 바꿔주기 설정 
+// 2) 만료날짜 설정 (24시간 형식)
+
+$current_time_popup = date('Y-m-d H:i:s');	// 팝업 만료 확인용 현재 시간 변수
+?>
+
+<? // * * * 팝업 만료 설정 1 Start * * * 
+$pop_end_1 = date('2019-05-01 00:00:00');	// 만료 날짜 설정. 형식 : '1990-01-01 23:01:01'. 시간은 24시간으로 작성.
+if((strtotime($pop_end_1) - strtotime($current_time_popup)) > 0 ) {		// 만료 시간 비교
+?>
+<div class="prepare_pop">
+    <span class="close"></span>
+    <img src="/common/images/pop/prepare_pop.png" alt="" />
+</div>
+<? } 
+// * * * 팝업 만료 설정 1 End * * * 
+?>
+
+<!--오늘하루보지않기 START-->
+<script>
+	$(document).ready(function() {
+		if(getCookie("notToday") ==="Y"){
+			$("#event_pop").hide();
+		}
+		if(getCookie("notToday2") ==="Y"){
+			$(".main_pop_01").hide();
+		}
+		if(getCookie("notToday3") ==="Y"){
+			$(".main_pop_02").hide();
+		}
+	});
+	
+	function setCookie(name, value, expiredays){
+		var today = new Date();
+			today.setDate(today.getDate() + expiredays);
+
+			document.cookie = name + '=' + escape(value) + '; path=/; expires=' + today.toGMTString() + ';';
+	}
+
+	function getCookie(name){ 
+		var cName = name + "="; 
+		var x = 0; 
+		while ( x <= document.cookie.length ) { 
+			var y = (x+cName.length); 
+			if ( document.cookie.substring( x, y ) == cName ) 
+			{ 
+				if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+					endOfCookie = document.cookie.length;
+				return unescape( document.cookie.substring( y, endOfCookie ) ); 
+			} 
+			x = document.cookie.indexOf( " ", x ) + 1; 
+			if ( x == 0 ) 
+				break; 
+		} 
+		return ""; 
+	}
+	
+	function closeMainPopup(){
+		if ( document.pop_frm.chkbox.checked ){
+			setCookie('notToday','Y', 1);
+		}
+		$("#event_pop").hide();
+	}
+
+	function closeMainPopup2(){
+		if ( document.pop_frm2.chkbox.checked ){
+			setCookie('notToday2','Y', 1);
+		}
+		$(".main_pop_01").hide();
+	}
+
+	function closeMainPopup3(){
+		if ( document.pop_frm2.chkbox.checked ){
+			setCookie('notToday3','Y', 1);
+		}
+		$(".main_pop_02").hide();
+	}
+</script>
+
+<style>
+.pop_bottom{position:absolute;bottom:-38px;width:100%; text-align:left; background:#181818;padding:0 20px;overflow:hidden;line-height:37px;}
+.pop_bottom a {display:inline-block;color:#fff;font-family: 'notokr-regular';}
+.close_today input{margin-right:10px;}
+.close_pop{float:right;}
+</style>
+<!--오늘하루보지않기 END-->
+
+
+<!-- 쁘띠이벤트 -->
+<div id="event_pop">
+	<a href="/page/event/event.html"><img src="/common/images/pop/pop200131_01.jpg" alt=""/></a>
+	<!--div class='roll_box'>
+		<a href="/page/event/event.html"><img src="/common/images/pop/event_pop_01.png" alt=""/></a>
+		<a href="/page/event/event.html"><img src="/common/images/pop/event_pop_02.png" alt=""/></a>
+	</div-->
+	<div class="pop_bottom">
+		<form method="post" action="" name='pop_frm'>
+			<a class="close_today" href="javascript:void(0);"><input type="checkbox" name="chkbox">오늘하루보지않기</a>
+			<a class="close_pop" href="javascript:closeMainPopup();">[닫기]</a>
+		</form>
+	</div>
+</div>
+
+<style>
+#event_pop{position:absolute;top:130px;left:50%;margin-left:-878px;z-index:100;/*background:url('/common/images/pop/event_pop_bg.jpg');*/width:640px;text-align:center;cursor:pointer;}
+#event_pop .roll_box{margin-top:163px;display:inline-block;width:743px;}
+#event_pop .roll_box .slick-dots{margin-top:20px;}
+#event_pop .roll_box .slick-dots li{display:inline-block;}
+#event_pop .roll_box .slick-dots li:not(:last-child){margin-right:10px;}
+#event_pop .roll_box .slick-dots li.slick-active button{background:#fff;border:2px solid #fff;}
+#event_pop .roll_box .slick-dots button{text-indent:-999em;background:none;border-radius:50%;width:15px;height:15px;border:2px solid #fff;outline:none;cursor:pointer;margin:0;}
+
+@media all and (max-width:1574px){
+#event_pop{left:0;margin-left:0;}
+}
+</style>
+
+<script>
+  $(document).ready(function() {
+	$('#event_pop .roll_box').slick({
+		arrows:false,
+		dots:true,
+		autoplay:true
+	});
+  });
+
+</script>
+
+<style>
+.main_pop_01{position:absolute;top:130px;z-index:100;left:50%;margin-left:402px;z-index:999;}
+.main_pop_02{position:absolute;top:130px;z-index:100;left:50%;margin-left:-238px;}
+
+@media all and (max-width:1574px){
+/*.main_pop_01{margin-left:0;left:0;}
+.main_pop_02{margin-left:0;left:0;}*/
+}
+</style>
+
+<!--진료안내팝업-->
+<div class='main_pop_01'>
+	<img src="/common/images/pop/pop200131_03.jpg" alt=""/>
+	<div class="pop_bottom">
+		<form method="post" action="" name='pop_frm2'>
+			<a class="close_today" href="javascript:void(0);"><input type="checkbox" name="chkbox">오늘하루보지않기</a>
+			<a class="close_pop" href="javascript:closeMainPopup2();">[닫기]</a>
+		</form>
+	</div>
+</div>
+
+<!-- 피부이벤트 -->
+<div class='main_pop_02'>
+	<a href='/page/event/event.html'><img src="/common/images/pop/pop200131_02.jpg" alt=""/></a>
+	<div class="pop_bottom">
+		<form method="post" action="" name='pop_frm3'>
+			<a class="close_today" href="javascript:void(0);"><input type="checkbox" name="chkbox">오늘하루보지않기</a>
+			<a class="close_pop" href="javascript:closeMainPopup3();">[닫기]</a>
+		</form>
+	</div>
+</div>
+
+

@@ -1,0 +1,207 @@
+<div id="wrap">
+<div class="doc_m"></div>
+
+<header id="header">
+    <article class="header_con">
+        <div class="inner1200">
+            <h1 class="header_logo"><a href="/" title="home"><img src="/common/images/main/logo.png" alt="서울자이치과 로고" /></a></h1>
+			<div class="header_time">
+				<img src="/common/images/main/header_icon_time.png" class="header_time_icon"/>				
+				<div class="header_time_txt">
+					<h5>오늘의 진료시간(<span class="day">화</span>)</h5>
+					<h6><b>AM 10:00 ~ PM 08:00</b></h6>
+				</div>
+			</div>
+            <ul class="header_log_list">
+				<? if($_COOKIE['m_id'] != '' && $_COOKIE['m_name'] != '') { ?>
+					<li><a href="/auth/modify/modify.php" title="회원정보수정 바로가기">MODIFY</a></li>
+					<li><a href="/auth/login/logout.php" title="로그아웃 바로가기">LOGOUT</a></li>
+				<? } else { ?>
+					<li><a href="/auth/login/login.php" title="로그인 바로가기">LOGIN</a></li>
+					<li><a href="/auth/join/join.php" title="회원가입 바로가기">JOIN</a></li>
+				<? } ?>
+            </ul>
+            <div class="toggle"><p>-</p><p>-</p><p>-</p></div>
+        </div>
+    </article>
+    <div class="header_m_cover">M 배경</div>
+    <nav class="gnb_wrap">
+        <div class="gnb_bg">PC 배경</div>
+		<div class="gnb_m_con">
+			<img src="/common/images/main/logo.png" alt="서울자이치과 로고">
+			<img src="/common/images/main/gnb_close.png" alt="메뉴 닫기" class="gnb_m_close">			
+		</div>
+        <ul class="gnb">
+            <li class="dep1"><a href="/page/about/philosophy.php?page=1" title="치과소개 바로가기">치과소개</a>
+                <ul class="dep2_list">
+                    <li><a href="/page/about/philosophy.php?page=1" title="진료철학 바로가기">진료철학</a></li>
+                    <li><a href="/page/about/member.php?page=2" title="의료진소개 바로가기">의료진소개</a></li>
+                    <li><a href="/page/about/interior.php?page=3" title="진료공간 바로가기">진료공간</a></li>
+					<li><a href="/page/about/schedule.php?page=4" title="진료안내 바로가기">진료안내</a></li>
+                    <li><a href="/page/about/map.php?page=5" title="오시는 길 바로가기">오시는 길</a></li>
+                </ul>
+            </li>
+            <li class="dep1"><a href="/page/special/specialist.php" title="서울자이의 특별함 바로가기">서울자이의 특별함</a>
+                <ul class="dep2_list">
+                    <li><a href="/page/special/specialist.php" title="통합치의학 전문의 바로가기">통합치의학 전문의</a></li>
+					<li><a href="/page/special/dentistry.php" title="아프지 않은 치과 바로가기">아프지 않은 치과</a></li>
+					<li><a href="/page/special/sterilization.php" title="멸균 소독 시스템 바로가기">멸균 소독 시스템</a></li>
+                </ul>
+            </li>
+            <li class="dep1"><a href="/page/implant/deep.php" title="프리미엄 임플란트 바로가기">프리미엄 임플란트</a>
+                <ul class="dep2_list">
+                    <li><a href="/page/implant/deep.php" title="딥임플란트 바로가기">딥임플란트</a></li>
+					<li><a href="/page/implant/minimal.php" title="최소 뼈이식 임플란트 바로가기">최소 뼈이식 임플란트</a></li>
+					<li><a href="/page/implant/maxillary.php" title="상악동 거상술 없는 임플란트 바로가기">상악동 거상술 없는 임플란트</a></li>
+                </ul>
+            </li>
+            <li class="dep1"><a href="/page/dental/aesthetic.php?page=1" title="일반진료 바로가기">일반진료</a>
+                <ul class="dep2_list">
+                    <li><a href="/page/dental/aesthetic.php?page=1" title="심미치료 바로가기">심미치료</a></li>
+					<li><a href="/page/dental/cavity.php?page=2" title="충치치료 바로가기">충치치료</a></li>
+					<li><a href="/page/dental/neurotherapy.php?page=3" title="신경치료 바로가기">신경치료</a></li>
+					<li><a href="/page/dental/perio.php?page=4" title="치주치료 바로가기">치주치료</a></li>
+					<li><a href="/page/dental/wisdom.php?page=5" title="사랑니발치 바로가기">사랑니발치</a></li>
+                </ul>
+            </li>
+            <li class="dep1"><a href="/board/counsel/list.php" title="커뮤니티 바로가기">커뮤니티</a>
+                <ul class="dep2_list">
+                    <li><a href="/board/counsel/list.php" title="온라인상담 바로가기">온라인상담</a></li>
+                    <li><a href="/board/notice/list.php" title="공지사항 바로가기">공지사항</a></li>
+                    <li><a href="/board/media/list.php" title="보도자료 바로가기">보도자료</a></li>
+                </ul>
+            </li>
+            <li class="gnb_mobile_last">MOBLIE 여백</li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+$(document).ready(function(){
+    allGnb();
+});
+
+$(window).resize(function(){
+    allGnb();
+});
+
+$(window).scroll(function(){
+    allGnb();
+});
+
+function allGnb (){
+    if( $('.doc_m').css('display') === 'none'){ 
+       /* pc */
+        if( !$('#header').hasClass('pc') ){ 
+            pcGnb();
+        }        
+
+        $('#header').addClass('pc').removeClass('m');
+        pcGnbScroll();
+    }else{ 
+        /* mobile */
+        if( !$('#header').hasClass('m') ){
+            mGnb();
+        }
+
+        $('#header').addClass('m').removeClass('pc');
+        $('#container').css({paddingTop: $('#header').outerHeight() });        
+    }
+}
+
+function clearGnb (){
+    /* 초기화 */
+    $('#container').css({paddingTop: 0 });  
+    $('.gnb .dep1,.gnb_bg,.header_con,#container,.gnb .dep1 > a,.toggle').off();
+    $('.gnb_wrap').removeClass('fix on');
+    $('.gnb_bg').stop().hide();
+    $('.header_m_cover').stop().hide();
+    $('.toggle').removeClass('on');
+    $('.gnb .dep1').removeClass('on');
+    $('.gnb .dep2_list').stop().slideUp(0);
+}
+
+function pcGnb (){
+    /* clear & layout */
+    clearGnb();
+    $('.gnb_bg').css({height:'240px'});
+    $('.gnb .dep2_list').css({height:'240px'});
+
+    /* gnb evnet */
+    $('.gnb .dep1').on('mouseenter',function(){
+        $('.gnb_bg').stop().slideDown(300);
+        $('.gnb .dep2_list').stop().hide();
+        $(this).find('.dep2_list').stop().show();
+    });
+    $('.gnb_bg').on('mouseleave',function(){ pcGnbOff(); });
+    $('html,body').on('mouseleave',function(){ pcGnbOff(); });
+    $('.header_con').on('mouseenter',function(){ pcGnbOff(); });
+    $('#container').on('mouseenter',function(){ pcGnbOff(); });
+
+    function pcGnbOff (){
+        $('.gnb_bg').stop().slideUp(300);
+        $('.gnb .dep2_list').stop().hide();
+    }
+}
+
+function pcGnbScroll (){
+    if( $(window).scrollTop() >= 130 ){
+        if( !$('.gnb_wrap').hasClass('fix') ){
+            $('.gnb_wrap').addClass('fix');
+            $('#container').css({paddingTop: $('.gnb_wrap').outerHeight() });        
+        }
+    }else{
+        if( $('.gnb_wrap').hasClass('fix') ){
+            $('.gnb_wrap').removeClass('fix');
+            $('#container').css({paddingTop: 0 });  
+        }
+    }    
+}
+
+function mGnb (){
+    /* clear & layout */
+    clearGnb();
+    $('.gnb .dep2_list').css({height:'auto'});
+
+    /* gnb open&close */
+    $('.toggle').on('click', function(){
+        $('.header_m_cover').stop().fadeIn();
+        $('.gnb_wrap').addClass('on');
+    });
+    $('.gnb_m_close').on('click', function(){
+        $('.header_m_cover').stop().fadeOut();
+        $('.gnb_wrap').removeClass('on');       
+        mGnbOff(); 
+    });
+
+    /*$('.toggle').on('click', function(){
+        if( !$(this).hasClass('on') ){
+            $(this).addClass('on');
+            $('.gnb_wrap').addClass('on');
+            $('.gnb_bg').stop().fadeIn().css({height:'100vh'});
+        }else{
+            $(this).removeClass('on');
+            $('.gnb_wrap').removeClass('on');
+            $('.gnb_bg').stop().hide();            
+            mGnbOff();
+        }
+    });*/
+
+    /* gnb event */
+    $('.gnb .dep1 > a').on('click',function(e){
+        e.preventDefault();
+        if( !$(this).parent().hasClass('on')){
+            mGnbOff();
+            $(this).parent().addClass('on');
+            $(this).parent().find('.dep2_list').stop().slideDown();
+        }else{
+            mGnbOff();  
+        }
+    });
+
+    function mGnbOff (){
+        $('.gnb .dep1').removeClass('on');
+        $('.gnb .dep2_list').stop().slideUp();
+    }
+}
+</script>

@@ -1,0 +1,392 @@
+<? if($_SERVER['REMOTE_ADDR'] != '106.249.162.219' && $_SERVER['REMOTE_ADDR'] != '121.161.248.111') { 
+header("Location: /landing/");
+} ?>
+
+<? include_once $_SERVER['DOCUMENT_ROOT']."/common/html/head.html"; ?>
+<? include_once $_SERVER['DOCUMENT_ROOT']."/common/html/header.html"; ?>
+
+<?
+$main_notice_cnt = queryMainBoardListLimitCount("notice");
+$main_notice 	= queryMainBoardListLimit("notice", 3);
+
+$main_press_cnt = queryMainBoardListLimitCount("press");
+$main_press 	= queryMainBoardListLimit("press", 5);
+
+$main_counsel_cnt = queryMainBoardListLimitCount("counsel");
+$main_counsel 	 = queryMainBoardListLimit("counsel", 5 );
+?>
+
+<? include_once $_SERVER['DOCUMENT_ROOT']."/common/html/pop_module.php"; ?>
+
+<section id="container">
+	<article class="mv">
+		<article class="mv_con mv_con1">
+			<div class="inner1200">
+				<div class="mv_txt frame frame_left_top frame_right_btm">
+					<div class="mv_txt_tit">
+						<h6 class="color_xi ani up"><b>SEOUL XI DENTAL CLINIC</b></h6>
+						<h1 class="ani up delay1">방역 안심 클린 치과</h1>
+					</div>
+					<p class="ani up delay2">코로나 예방을 위해 <br/>정기적으로 방역을 실시하고있습니다.</p>
+				</div>
+			</div>
+		</article>
+		<article class="mv_con mv_con2">
+			<div class="inner1200">
+				<div class="mv_txt center white">
+					<div class="mv_txt_tit frame frame_left_top frame_right_btm">
+						<h1 class="ani up"><strong>서울대 치과대학</strong> 출신 <br/>전문의의 믿을 수 있는 진료</h1>
+					</div>
+					<p class="ani up delay2">보건복지부의 인증을 받은 전문의가 <br/>환자의 만족을 최우선으로 생각하며 꼼꼼하게 진료합니다.</p>
+				</div>
+			</div>
+		</article>
+		<article class="mv_con mv_con3">
+			<div class="inner1200">
+				<div class="mv_txt frame frame_left_top frame_right_btm">
+					<div class="mv_txt_tit">
+						<h6 class="color_xi ani up"><b>SEOUL XI DENTAL CLINIC</b></h6>
+						<h1 class="ani up delay1">더 이상 <strong>걱정하지 마세요!</strong></h1>
+						<h2 class="ani up delay2">부작용과 재수술 자이치과에는 없습니다</h2>
+					</div>
+					<p class="ani up delay3">오래써도 탈이 안 나는 임플란트, 서울자이치과와 함께 하세요</p>
+				</div>
+			</div>
+		</article>
+		<article class="mv_con mv_con4">
+			<div class="inner1200">
+				<div class="mv_txt frame frame_left_top frame_right_btm">
+					<div class="mv_txt_tit">
+						<h6 class="color_xi ani up"><b>SEOUL XI DENTAL CLINIC</b></h6>
+						<h1 class="ani up delay1">서울자이치과의 <br/><strong>3D 진단장비 시스템</strong></h1>
+					</div>
+					<p class="ani up delay2">정확한 진단을 위해 꼭 필요한 안전진단장비! <br/>치아상태별 맞춤치료가 가능합니다.</p>
+				</div>
+			</div>
+		</article>
+	</article>
+
+	<article class="con main_clinic">
+		<div class="inner1200">
+			<div class="common_tit main_tit">
+				<h6 class="color_xi"><b>SEOUL XI DENTAL CLINIC</b></h6>
+				<h1>서울자이치과 <span class="color_xi">진료과목</span></h1>
+			</div>
+			<ul class="main_clinic_list">
+				<li>
+					<a href="/page/implant/deep.php" title="임플란트 바로가기">
+						<figure>
+							<img src="/common/images/main/main_clinic_icon1.png" class="off" alt="icon">
+							<img src="/common/images/main/main_clinic_icon1_on.png" class="on" alt="icon">
+						</figure>
+						<h1>임플란트</h1>
+					</a>
+				</li>
+				<li>
+					<a href="/page/dental/cavity.php" title="충치치료 바로가기">
+						<figure>
+							<img src="/common/images/main/main_clinic_icon2.png" class="off" alt="icon">
+							<img src="/common/images/main/main_clinic_icon2_on.png" class="on" alt="icon">
+						</figure>
+						<h1>충치치료</h1>
+					</a>
+				</li>
+				<li>
+					<a href="/page/dental/aesthetic.php" title="심미치료 바로가기">
+						<figure>
+							<img src="/common/images/main/main_clinic_icon3.png" class="off" alt="icon">
+							<img src="/common/images/main/main_clinic_icon3_on.png" class="on" alt="icon">
+						</figure>
+						<h1>심미치료</h1>
+					</a>
+				</li>
+				<li>
+					<a href="/page/dental/neurotherapy.php" title="신경치료 바로가기">
+						<figure>
+							<img src="/common/images/main/main_clinic_icon4.png" class="off" alt="icon">
+							<img src="/common/images/main/main_clinic_icon4_on.png" class="on" alt="icon">
+						</figure>
+						<h1>신경치료</h1>
+					</a>
+				</li>
+				<li>
+					<a href="/page/dental/wisdom.php" title="사랑니발치 바로가기">
+						<figure>
+							<img src="/common/images/main/main_clinic_icon5.png" class="off" alt="icon">
+							<img src="/common/images/main/main_clinic_icon5_on.png" class="on" alt="icon">
+						</figure>
+						<h1>사랑니발치</h1>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</article>
+
+	<article class="con main_point">
+		<div class="inner1200">
+			<ul class="main_point_list">
+				<li>
+					<a href="/page/implant/deep.php" title="딥 임플란트 바로가기">
+						<h1>딥 임플란트</h1>
+						<h2><b>Deep Implant</b></h2>
+						<p>장기적인 예후를 고려한 환자를 위한 임플란트</p>
+						<span class="btn">Detail view</span>
+					</a>
+				</li>
+				<li class="font_white">
+					<a href="/page/dental/neurotherapy.php" title="신경치료 바로가기">
+						<h1>자연치아 살리는 신경치료</h1>
+						<h2><b>Natural Neurotherapy</b></h2>
+						<p>신경치료가 어려워 발치를 권하지 않습니다. <br/>자연 치아는 최대한 살리고자 노력합니다.</p>
+						<span class="btn hover_xi">Detail view</span>
+					</a>
+				</li>
+				<li class="text_right font_white">
+					<a href="/page/special/dentistry.php" title="아프지 않은 치과 바로가기">
+						<h1>아프지 않은 치과</h1>
+						<h2><b>Unpainful Dental</b></h2>
+						<p>통증 없이 편안하게 치료받는 <br>무통마취 시스템</p>
+						<span class="btn hover_xi">Detail view</span>
+					</a>
+				</li>
+				<li class="text_right">
+					<a href="/page/special/sterilization.php" title="멸균 소독 시스템 바로가기">
+						<h1>멸균 소독 시스템</h1>
+						<h2><b>Sterilization System</b></h2>
+						<p>‘1인 1기구 원칙’으로 12단계의 <br/>철저한 멸균과정을 거친 기구로만 치료합니다.</p>
+						<span class="btn">Detail view</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</article>
+
+	<article class="con main_dr">
+		<div class="inner1200 clear">
+			<article class="main_dr_left">
+				<img src="/common/images/main/main_dr_img.png" class="main_dr_img" alt="박세민 대표원장 사진"/> 
+				<div class="main_dr_name">
+					<div class="clear">
+						<h1>박세민 <span>대표원장</span></h1>
+						<a href="/page/about/member.php" class="btn" title="의료진소개 바로가기">Detail View +</a>
+					</div>
+					<h2 class="color_xi">정확한 진료, <br/>정성을 다하는 진료</h2>
+					<p>건강한 치아는 환한 웃음을 위해 필요하다고 생각합니다.</p>
+					<p>환자 여러분들께 만족스러운 웃음을 선사해드리겠습니다.</p>
+				</div>
+			</article>
+			<article class="main_dr_right">
+				<div class="main_dr_logo">
+					<img src="/common/images/main/main_dr_logo.png"/>
+					<h1>SEOUL <span class="color_xi">XI</span> DENTAL DOCTOR</h1>
+				</div>
+				<ul class="main_dr_history">
+					<br/>
+					<li>보건복지부 인증 통합치의학과 전문의</li><br/><br/>
+					<li>서울과학고등학교 졸업</li>
+					<li>서울대학교 치의학대학원 졸업</li>
+					<li>서울대학교 치의학대학원 치의학 석사</li>
+					<li>서울대학교 치의학 박사 과정</li>
+					<li>대한심미치과학회 인정의 펠로우</li><br/><br/>
+					<li>대한통합치과학회 정회원</li>
+					<li>대한턱관절교합학회 정회원</li>
+					<li>대한심미치과학회 정회원</li><br/><br/>
+					<li>오스템 AIC Implant master course 수료</li>
+					<li>가야보철 일반과정 수료</li>
+					<li>Donald Kitzis Memorial Institute 교정 고급과정 수료</li>
+					<li>Donald Kitzis Memorial Institute 보철 고급과정 수료</li>
+					<li>F&I Dental Implant Institute Advanced Implant Surgery Course 수료</li><br/><br/>
+					<li class="not_dot">前) 동대문 치과의원 부원장</li>
+					<li class="not_dot">前) 서울영플란트 치과의원 부원장</li>
+					<br/>
+				</ul>
+			</article>
+		</div>
+	</article>
+
+	<article class="con main_board">
+		<div class="inner1200">
+			<div class="common_tit main_tit">
+				<h6 class="color_xi"><b>SEOUL XI DENTAL CLINIC</b></h6>
+				<h1>서울자이치과 <span class="color_xi">커뮤니티</span></h1>
+			</div>		
+			<section class="clear">
+				<!-- 공지사항 -->
+				<article class="main_board_box">
+					<div class="main_board_tit">
+						<h2>공지사항</h2>
+						<a href="/board/notice/list.php" title="공지사항 바로가기">Detail View +</a>
+					</div>
+					<div class="main_board_thumb">
+						<img src="https://via.placeholder.com/500x400" alt="공지사항 썸네일">
+					</div>
+					<ul class="main_board_list">
+						<li>
+							<a href="/board/notice/list.php" title="공지사항 바로가기">
+								<h3>긴 제목 테스트 입니다. 가나다라마바사아자차카타파하</h3>
+								<p>2020.10.23</p>
+							</a>
+						</li>
+						<li>
+							<a href="/board/notice/list.php" title="공지사항 바로가기">
+								<h3>제목입니다.</h3>
+								<p>2020.10.23</p>
+							</a>
+						</li>
+					</ul>
+				</article>
+				<!-- //공지사항 -->
+				<!-- 보도자료 -->
+				<article class="main_board_box dark">
+					<div class="main_board_tit">
+						<h2>보도자료</h2>
+						<a href="/board/media/list.php" title="보도자료 바로가기">Detail View +</a>
+					</div>
+					<div class="main_board_thumb">
+						<img src="https://via.placeholder.com/362x180" alt="보도자료 썸네일">
+					</div>
+					<ul class="main_board_list">
+						<li>
+							<a href="/board/media/list.php" title="보도자료 바로가기">
+								<h3>긴 제목 테스트 입니다. 가나다라마바사아자차카타파하</h3>
+								<p>2020.10.23</p>
+							</a>
+						</li>
+						<li>
+							<a href="/board/media/list.php" title="보도자료 바로가기">
+								<h3>제목입니다.</h3>
+								<p>2020.10.23</p>
+							</a>
+						</li>
+					</ul>
+				</article>
+				<!-- //보도자료 -->
+				<!-- 온라인 상담 -->
+				<article class="main_board_box">
+					<div class="main_board_tit">
+						<h2>온라인 상담</h2>
+						<a href="/board/counsel/list.php" title="온라인상담 바로가기">Detail View +</a>
+					</div>
+					<div class="main_board_thumb">
+						<img src="https://via.placeholder.com/362x180" alt="온라인 상담 썸네일">
+					</div>
+					<ul class="main_board_list">
+						<li>
+							<a href="/board/counsel/list.php" title="온라인상담 바로가기">
+								<h3>긴 제목 테스트 입니다. 가나다라마바사아자차카타파하</h3>
+								<p>2020.10.23</p>
+							</a>
+						</li>
+						<li>
+							<a href="/board/counsel/list.php" title="온라인상담 바로가기">
+								<h3>제목입니다.</h3>
+								<p>2020.10.23</p>
+							</a>
+						</li>
+					</ul>
+				</article>
+				<!-- //온라인 상담 -->
+			</section>
+		</div>
+	</article>
+
+	<article class="main_loca">
+		<div class="main_loca_con">
+			<div class="main_loca_txt_wrap">
+				<div class="main_loca_txt">
+					<a href="/page/about/map.php" title="오시는 길 바로가기">
+						<h2>LOCATION</h2>
+						<p>서울자이치과를 방문해주시는 고객분들을 위하여 <br/>오시는 길을 안내해드립니다.</p>
+						<h6>경기도 김포시 걸포2로 21, <br/>파인스타 메디컬 5층 서울자이치과</h6>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="main_loca_con main_loca_map">
+			<!-- * 카카오맵 - 지도퍼가기 -->
+			<!-- 1. 지도 노드 -->
+			<div id="daumRoughmapContainer1605952879093" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+			<!--
+				2. 설치 스크립트
+				* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+			-->
+			<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+			<!-- 3. 실행 스크립트 -->
+			<script charset="UTF-8">
+				new daum.roughmap.Lander({
+					"timestamp" : "1605952879093",
+					"key" : "23326",
+					// "mapWidth" : "640",
+					// "mapHeight" : "360"
+				}).render();
+			</script>			
+		</div>
+	</article>
+
+	<article class="main_info">
+		<div class="inner1200 clear">
+			<div class="main_info_promise">
+				<h2>수술 결과 뿐 아니라 과정까지 <br/><span>‘매우 만족’</span>하시도록 항상 노력합니다.</h2>
+				<p>항상 초심으로 보답하는 치과가 되도록 노력하겠습니다.</p>
+			</div>
+			<div class="main_info_time frame frame_left_top">
+				<h2>진료안내</h2>
+				<h3><a href="tel:031-8049-7528" title="전화걸기">031. 8049. 7528</a></h3>
+				<ul class="main_info_time_list">
+					<li>
+						<h6><span class="letter2">월수</span>금 :&nbsp;</h6>
+						<p>AM 10:00 ~ PM 06:00</p>
+					</li>
+					<li>
+						<h6><span class="letter1">화</span>목 :&nbsp;</h6>
+						<p>AM 10:00 ~ PM 08:00</p>
+					</li>
+					<li>
+						<h6><span class="letter2">토요</span>일 :&nbsp;</h6>
+						<p>AM 10:00 ~ PM 02:00</p>
+					</li>
+					<li>
+						<h6><span class="letter3">점심시</span>간 :&nbsp;</h6>
+						<p>PM 01:00 ~ PM 02:00</p>
+					</li>
+					<li>
+						<h6><span class="letter3">저녁시</span>간 :&nbsp;</h6>
+						<p>PM 06:00 ~ PM 06:30</p>
+					</li>
+					<li class="main_info_time_ps">공휴일 · 일요일은 휴진입니다.</li>
+				</ul>
+			</div>
+		</div>
+	</article>
+</section>
+
+<? include_once $_SERVER['DOCUMENT_ROOT']."/common/html/footer.html"; ?>
+
+<script>
+/* main */
+$(document).ready(function(){
+	/* main visual slide */
+	var $mv = $('.mv');
+	
+	$mv.slick({
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 3000,
+	});
+
+	mvSlideAni();
+
+	$mv.on('afterChange',function(slick, currentSlide){
+		mvSlideAni();
+	});
+
+	function mvSlideAni(){
+		var $slide = $('.mv_con .ani');
+		var $slideActive = $('.mv_con.slick-current .ani');
+
+		$slide.removeClass('on');
+		$slideActive.addClass('on');	
+	}
+
+});
+</script>
